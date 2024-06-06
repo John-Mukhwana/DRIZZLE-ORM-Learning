@@ -8,11 +8,10 @@ import db,{client} from "./db"
 
 async function migration() {
 console.log("=========migration started========")
-await migrate(db,{migrationsFolder:__dirname+"/migrations"})
+await migrate(db,{migrationsFolder: __dirname +"/migrations"})
 await client.end()
 console.log("=========migration completed========")
 process.exit(0)
-
 }
 migration().catch((err)=>{
 
